@@ -5,7 +5,6 @@ plugins {
     kotlin("native.cocoapods")
     id("kotlinx-serialization")
     id("com.android.library")
-    id("com.squareup.sqldelight")
 }
 
 android {
@@ -68,7 +67,6 @@ kotlin {
             dependencies {
                 implementation(libs.koin.core)
                 implementation(libs.coroutines.core)
-                implementation(libs.sqlDelight.coroutinesExt)
                 implementation(libs.bundles.ktor.common)
                 implementation(libs.touchlab.stately)
                 implementation(libs.multiplatformSettings.common)
@@ -84,7 +82,6 @@ kotlin {
         val androidMain by getting {
             dependencies {
                 implementation(libs.androidx.lifecycle.viewmodel)
-                implementation(libs.sqlDelight.android)
                 implementation(libs.ktor.client.okHttp)
             }
         }
@@ -95,7 +92,6 @@ kotlin {
         }
         val iosMain by getting {
             dependencies {
-                implementation(libs.sqlDelight.native)
                 implementation(libs.ktor.client.ios)
             }
         }
@@ -121,11 +117,5 @@ kotlin {
         }
         ios.deploymentTarget = "12.4"
         podfile = project.file("../ios/Podfile")
-    }
-}
-
-sqldelight {
-    database("KaMPKitDb") {
-        packageName = "co.touchlab.kampkit.db"
     }
 }

@@ -1,12 +1,8 @@
 package co.touchlab.kampkit
 
-import co.touchlab.kampkit.ktor.DogApi
-import co.touchlab.kampkit.ktor.DogApiImpl
-import co.touchlab.kampkit.models.BreedRepository
 import co.touchlab.kermit.Logger
 import co.touchlab.kermit.StaticConfig
 import co.touchlab.kermit.platformLogWriter
-import kotlinx.coroutines.Dispatchers
 import kotlinx.datetime.Clock
 import org.koin.core.KoinApplication
 import org.koin.core.component.KoinComponent
@@ -41,19 +37,6 @@ fun initKoin(appModule: Module): KoinApplication {
 }
 
 private val coreModule = module {
-    single {
-        DatabaseHelper(
-            get(),
-            getWith("DatabaseHelper"),
-            Dispatchers.Default
-        )
-    }
-    single<DogApi> {
-        DogApiImpl(
-            getWith("DogApiImpl"),
-            get()
-        )
-    }
     single<Clock> {
         Clock.System
     }
@@ -64,16 +47,6 @@ private val coreModule = module {
     // See https://github.com/touchlab/Kermit
     val baseLogger = Logger(config = StaticConfig(logWriterList = listOf(platformLogWriter())), "KampKit")
     factory { (tag: String?) -> if (tag != null) baseLogger.withTag(tag) else baseLogger }
-
-    single {
-        BreedRepository(
-            get(),
-            get(),
-            get(),
-            getWith("BreedRepository"),
-            get()
-        )
-    }
 }
 
 internal inline fun <reified T> Scope.getWith(vararg params: Any?): T {
