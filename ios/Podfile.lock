@@ -1,5 +1,13 @@
 PODS:
-  - shared (1.2)
+  - Bolts/Tasks (1.9.1)
+  - Parse (1.19.3):
+    - Parse/Core (= 1.19.3)
+  - Parse/Core (1.19.3):
+    - Bolts/Tasks (= 1.9.1)
+  - ParseSwift (1.11.0)
+  - shared (1.2):
+    - Parse
+    - ParseSwift
   - SwiftLint (0.41.0)
 
 DEPENDENCIES:
@@ -8,6 +16,9 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - Bolts
+    - Parse
+    - ParseSwift
     - SwiftLint
 
 EXTERNAL SOURCES:
@@ -15,7 +26,10 @@ EXTERNAL SOURCES:
     :path: "../shared/"
 
 SPEC CHECKSUMS:
-  shared: f4e79703f970b0a781d56111da6a1e99a228580a
+  Bolts: 8c1e8aab2f603387b8b9924f57d1d64f43d3ffdc
+  Parse: 0abb63a0ff6fa34a3f64b81d595a294e2ece143a
+  ParseSwift: 7d3a97f4536f43379458fc88978fc0c6deeaf7bb
+  shared: 47a8d24309b75677c8a0c87096071932ac92f769
   SwiftLint: c585ebd615d9520d7fbdbe151f527977b0534f1e
 
 PODFILE CHECKSUM: d5a73f50a47bad1893e4fbf8978f1bef946ebdf6

@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "519509810454",
+    "project_id": "scala-kmm",
+    "storage_bucket": "scala-kmm.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:519509810454:android:8d5c725a14cc0a605b4437",
+        "android_client_info": {
+          "package_name": "it.samuele794.scala.android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "519509810454-keuab76vnpb1c1elb153bn9kcra2m1rm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBYGBF5r2TCY1ZyyCLYgkomvUaXROa8rd4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "519509810454-keuab76vnpb1c1elb153bn9kcra2m1rm.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "519509810454-gu4jfucb9218mms54pkavkhk4ib7sfj4.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "it.samuele794.scala"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

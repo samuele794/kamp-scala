@@ -61,7 +61,7 @@ roboelectric = { module = "org.robolectric:robolectric", version = "4.7.3" }
 
 
 touchlab-kermit = { module = "co.touchlab:kermit", version = "1.0.3" }
-touchlab-stately = { module = "co.touchlab:stately-common", version = "1.2.1" }
+#touchlab-stately = { module = "co.touchlab:stately-common", version = "1.2.1" }
 
 turbine = { module = "app.cash.turbine:turbine", version = "0.7.0" }
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }

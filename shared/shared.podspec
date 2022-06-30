@@ -8,8 +8,9 @@ Pod::Spec.new do |spec|
     spec.summary                  = 'Common library for the KaMP starter kit'
     spec.vendored_frameworks      = 'build/cocoapods/framework/shared.framework'
     spec.libraries                = 'c++'
-    spec.ios.deployment_target = '12.4'
-                
+    spec.ios.deployment_target = '14.1'
+    spec.dependency 'Parse'
+    spec.dependency 'ParseSwift'
                 
     spec.pod_target_xcconfig = {
         'KOTLIN_PROJECT_PATH' => ':shared',
